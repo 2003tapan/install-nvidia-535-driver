@@ -1,20 +1,20 @@
 #!/bin/bash
 
 # Install prerequisites
-sudo apt update
-sudo apt install -y build-essential dkms
+#sudo apt update
+#sudo apt install -y build-essential dkms
 
 # Add the NVIDIA PPA repository to get the latest drivers
-sudo add-apt-repository ppa:graphics-drivers/ppa
+#sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
 
 # Install NVIDIA 535 driver
-sudo apt install -y nvidia-driver-535
+#sudo apt install -y nvidia-driver-535
 
 # Blacklist Nouveau drivers (optional, if necessary)
-sudo bash -c "echo 'blacklist nouveau' > /etc/modprobe.d/blacklist-nouveau.conf"
-sudo bash -c "echo 'options nouveau modeset=0' >> /etc/modprobe.d/blacklist-nouveau.conf"
-sudo update-initramfs -u
+#sudo bash -c "echo 'blacklist nouveau' > /etc/modprobe.d/blacklist-nouveau.conf"
+#sudo bash -c "echo 'options nouveau modeset=0' >> /etc/modprobe.d/blacklist-nouveau.conf"
+#sudo update-initramfs -u
 
 # Reboot to apply the changes
 echo "NVIDIA 535 driver installation completed. Please reboot the system."
